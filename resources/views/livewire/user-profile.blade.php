@@ -1,0 +1,21 @@
+<div>
+    <header class="mb-12">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900">{{ $user->name }}</h1>
+        <p class="mt-2 text-sm text-gray-500">&#64;{{ $user->username }}</p>
+    </header>
+
+
+    @foreach ($blogs as $blog)
+        <article>
+            <h2 class="text-2xl font-bold text-gray-900 hover:text-indigo-600">
+                {{ $blog->description }}
+            </h2>
+            <p class="mt-3 text-base text-gray-600 line-clamp-2">
+                {{ $blog->description }}
+            </p>
+            <div class="mt-4 text-xs text-gray-500">
+                <span>Published on {{ $blog->updated_at->format('F j, Y') }}</span>
+            </div>
+        </article>
+    @endforeach
+</div>

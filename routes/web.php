@@ -1,15 +1,16 @@
 <?php
 
+use App\Livewire\UserProfile;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-
-Route::view('profile', 'profile')
+Route::view('settings', 'profile')
     ->middleware(['auth'])
-    ->name('profile');
+    ->name('settings');
 
 require __DIR__.'/auth.php';
+
+Route::get('/{user:username}', UserProfile::class)
+    ->middleware(['auth'])
+    ->name('profile');
