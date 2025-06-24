@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             'user_id' => 1,
             'title' => 'Admin Blog 1',
             'description' => 'Admin Description 1',
-            'slug' => 'admin-blog-1',
+            'slug' => 'admin-blog-1' . '-' . uniqid(),
             'content' => 'Admin Content 1',
         ]);
 
@@ -49,7 +49,7 @@ class DatabaseSeeder extends Seeder
             'user_id' => 1,
             'title' => 'Admin Blog 2',
             'description' => 'Admin Description 2',
-            'slug' => 'admin-blog-2',
+            'slug' => 'admin-blog-2' . '-' . uniqid(),
             'content' => 'Admin Content 2',
         ]);
 
@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
             'user_id' => 2,
             'title' => 'Marcox Blog 1',
             'description' => 'Marcox Description 1',
-            'slug' => 'marcox-blog-1',
+            'slug' => 'marcox-blog-1' . '-' . uniqid(),
             'content' => 'Marcox Content 1',
         ]);
     }
