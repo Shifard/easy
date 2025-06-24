@@ -7,7 +7,7 @@
 
     @foreach ($blogs as $blog)
         <article>
-            <a href="{{ route('blog.view', ['user' => $user->username, 'blog' => $blog->slug]) }}" wire:navigate class="block">
+            <a href="{{ route('blog.view', ['blog' => $blog->slug]) }}" wire:navigate class="block">
                 <h2 class="text-2xl font-bold text-gray-900 hover:text-indigo-600">
                     {{ $blog->title }}
                 </h2>

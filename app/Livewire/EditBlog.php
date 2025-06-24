@@ -22,6 +22,8 @@ class EditBlog extends Component
 
     public function mount(Blog $blog)
     {
+        $this->authorize('update', $blog);
+
         $this->blog = $blog;
         $this->title = $blog->title;
         $this->description = $blog->description;

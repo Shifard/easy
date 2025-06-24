@@ -16,6 +16,8 @@ class ViewBlog extends Component
 
     public function delete()
     {
+        $this->authorize('delete', $this->blog);
+
         $this->blog->delete();
 
         return redirect()->route('profile', ['user' => $this->blog->user]);
