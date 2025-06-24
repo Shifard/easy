@@ -14,6 +14,13 @@ class ViewBlog extends Component
         $this->blog = $blog;
     }
 
+    public function delete()
+    {
+        $this->blog->delete();
+
+        return redirect()->route('profile', ['user' => $this->blog->user]);
+    }
+
     public function render()
     {
         return view('livewire.view-blog');

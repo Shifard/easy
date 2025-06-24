@@ -30,7 +30,7 @@ new class extends Component
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('profile', ['user' => Auth::user()->username])" :active="request()->routeIs('dashboard')" wire:navigate>
+                    <x-nav-link href="{{ route('blog.write') }}" :active="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Write') }}
                     </x-nav-link>
                 </div>
