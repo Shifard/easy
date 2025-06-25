@@ -52,8 +52,14 @@ new class extends Component
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('settings')" wire:navigate>
+                        <!-- Profile -->
+                        <x-dropdown-link href="{{ route('profile', ['user' => Auth::user()->username]) }}" wire:navigate>
                             {{ __('Profile') }}
+                        </x-dropdown-link>
+
+                        <!-- Settings -->
+                        <x-dropdown-link :href="route('settings')" wire:navigate>
+                            {{ __('Settings') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -81,8 +87,8 @@ new class extends Component
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('profile', ['user' => Auth::user()->username])" :active="request()->routeIs('dashboard')" wire:navigate>
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('blog.write')" :active="request()->routeIs('dashboard')" wire:navigate>
+                {{ __('Write') }}
             </x-responsive-nav-link>
         </div>
 
@@ -94,8 +100,14 @@ new class extends Component
             </div>
 
             <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('settings')" wire:navigate>
+                <!-- Profile -->
+                <x-responsive-nav-link href="{{ route('profile', ['user' => Auth::user()->username]) }}" wire:navigate>
                     {{ __('Profile') }}
+                </x-responsive-nav-link>
+
+                <!-- Settings -->
+                <x-responsive-nav-link :href="route('settings')" wire:navigate>
+                    {{ __('Settings') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
