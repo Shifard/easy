@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,12 +16,13 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Create admin account
+        $adminRole = Role::create(['name' => 'admin']);
         User::create([
             'name' => 'Admin',
             'username' => 'admin',
             'email' => 'admin@group2.com',
             'password' => bcrypt('adminadmin'),
-        ]);
+        ])->assignRole($adminRole);
 
         // Create other user accounts
         User::create([
