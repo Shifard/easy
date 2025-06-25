@@ -4,7 +4,7 @@
         <p class="mt-2 text-sm text-gray-500">&#64;{{ $blog->user->username }}</p>
     </a>
 
-    <p>{{ $blog->updated_at }}</p>
+    <span>Published on {{ $blog->updated_at->format('F j, Y') }}</span>
     <p>{{ $blog->title }}</p>
     <p>{{ $blog->description }}</p>
 

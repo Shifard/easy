@@ -22,7 +22,7 @@ new #[Layout('layouts.guest')] class extends Component
 
         $user = auth()->user();
 
-        $this->redirectIntended(default: route('profile', ['user' => $user]), navigate: true);
+        $this->redirectIntended(default: route('home'), navigate: true);
     }
 }; ?>
 

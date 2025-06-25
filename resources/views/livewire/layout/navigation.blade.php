@@ -23,7 +23,7 @@ new class extends Component
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('profile', ['user' => Auth::user()->username]) }}" wire:navigate>
+                    <a href="{{ route('home') }}"" wire:navigate>
                         Easy
                     </a>
                 </div>
