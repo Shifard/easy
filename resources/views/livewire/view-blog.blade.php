@@ -7,10 +7,9 @@
     <p>{{ $blog->updated_at }}</p>
     <p>{{ $blog->title }}</p>
     <p>{{ $blog->description }}</p>
-    <p>{!! $htmlBody !!}</p>
 
     @can('update', $blog)
-        <a href="{{ route('blog.edit', ['blog' => $blog, 'user' => $blog->user->username]) }}"
+        <a href="{{ route('blog.edit', ['blog' => $blog]) }}"
             wire:navigate
             class="px-3 py-1 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700">
             Edit
@@ -24,4 +23,6 @@
            Delete
         </button>
     @endcan
+
+    <p>{!! $htmlBody !!}</p>
 </div>
