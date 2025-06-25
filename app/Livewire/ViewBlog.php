@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Blog;
 use Livewire\Component;
+use Illuminate\Support\Str;
 
 class ViewBlog extends Component
 {
@@ -25,6 +26,8 @@ class ViewBlog extends Component
 
     public function render()
     {
-        return view('livewire.view-blog');
+        return view('livewire.view-blog', [
+            'htmlBody' => Str::markdown($this->blog->content),
+        ]);
     }
 }

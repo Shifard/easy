@@ -1,9 +1,14 @@
 <div>
-    <p>{{ $blog->user->name }}</p>
+    <a href="{{ route('profile', ['user' => $blog->user]) }}" class="mb-12">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900">{{ $blog->user->name }}</h1>
+        <p class="mt-2 text-sm text-gray-500">&#64;{{ $blog->user->username }}</p>
+    </a>
+
     <p>{{ $blog->updated_at }}</p>
     <p>{{ $blog->title }}</p>
     <p>{{ $blog->description }}</p>
-    <p>{{ $blog->content }}</p>
+    <p>{!! $htmlBody !!}</p>
+
     @can('update', $blog)
         <a href="{{ route('blog.edit', ['blog' => $blog, 'user' => $blog->user->username]) }}"
             wire:navigate
