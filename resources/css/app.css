@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header {
+  background-color: rgba(247, 249, 220, 1);
+}
+
+.gray-color {
+  color: rgb(93, 90, 136);
+}
+
+.gray-bg {
+  background-color: rgb(93, 90, 136);
+}
+
+.bg-yellowish {
+  background-color: #ebece1;
+}
+
+.hero-subtitle {
+  color: rgb(2, 1, 17);
+  letter-spacing: 0.08rem;
+  word-spacing: 0.3rem;
+}

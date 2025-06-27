@@ -12,8 +12,25 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+              dm: ['"DM Sans"', 'sans-serif'],
             },
+            width: {
+              '128': '32rem', 
+              '160': '40rem', 
+              '192': '48rem', 
+              '224': '56rem',
+              '256': '64rem',
+            },
+            height: {
+              '128': '32rem', 
+              '160': '40rem', 
+              '192': '48rem', 
+              '224': '56rem',
+              '256': '64rem',
+            },
+            inset: {
+              '30': '20rem',
+            }
         },
     },
 
