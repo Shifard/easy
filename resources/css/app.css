@@ -23,3 +23,12 @@
   letter-spacing: 0.08rem;
   word-spacing: 0.3rem;
 }
+
+.brand-purple { color: #5D548C; }
+.bg-brand-purple { background-color: #5D548C; }
+.hover\:bg-brand-purple-dark:hover { background-color: #4a4370; }
+.focus\:ring-purple-300:focus { --tw-ring-color: #C4B5FD; }
+.bg-brand-yellow { background-color: #FFD289; }
+.hover\:bg-brand-yellow-dark:hover { background-color: #F7C06A; }
+.bg-brand-red { background-color: #E57373; }
+.hover\:bg-brand-red-dark:hover { background-color: #D32F2F; }

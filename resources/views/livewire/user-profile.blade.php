@@ -1,4 +1,4 @@
-<div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
     <header class="mb-12">
         <h1 class="text-4xl font-bold tracking-tight text-gray-900">{{ $user->name }}</h1>
         <p class="mt-2 text-sm text-gray-500">&#64;{{ $user->username }}</p>

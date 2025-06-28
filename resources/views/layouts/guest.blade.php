@@ -8,23 +8,41 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
+        <style>
+            /* Custom styles to match the design */
+            .brand-purple { color: #5D548C; }
+            .bg-brand-purple { background-color: #5D548C; }
+            .hover\:bg-brand-purple-dark:hover { background-color: #4a4370; }
+        </style>
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/" wire:navigate>
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div>
+    <body class="font-sans antialiased" style="background-color: #F7F5F0;">
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
-            </div>
+        <!-- Header/Navigation -->
+        <header class="w-full px-4 sm:px-8 md:px-12 py-6">
+            <nav class="flex items-center justify-between max-w-7xl mx-auto">
+                <!-- Logo -->
+                <a href="/" wire:navigate class="flex items-center space-x-2">
+                    <img src="{{ asset('images/logo.png') }}" class="w-6 h-auto" alt="Logo">
+                    <h1 class="text-3xl font-light gray-color">Easy</h1>
+                </a>
+
+                <!-- Register Button -->
+                <a href="{{ route('register') }}" wire:navigate class="bg-brand-purple text-white font-semibold py-2 px-6 rounded-full hover:bg-brand-purple-dark transition duration-300">
+                    Register
+                </a>
+            </nav>
+        </header>
+        
+        <!-- This is where the Livewire component (e.g., your login form) will be injected -->
+        <div class="font-sans text-gray-900 antialiased">
+            {{ $slot }}
         </div>
     </body>
 </html>
