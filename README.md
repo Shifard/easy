@@ -1,5 +1,7 @@
 # Easy
 A Laravel-Based Minimalist Blogging Platform for Effortless Content Sharing
+![Home Screen](/docs/images/home_screen.png)
+![Blog Screen](/docs/images/demo_blog.png)
 
 ## Setting Up The Project
 
