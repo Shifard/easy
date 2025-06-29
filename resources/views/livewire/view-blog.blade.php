@@ -54,7 +54,7 @@
             @endcan
         </div>
 
-        <div class="prose prose-lg max-w-none text-gray-800">
+        <div class="prose max-w-none text-gray-800">
             {!! $htmlBody !!}
         </div>
     </article>

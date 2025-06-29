@@ -15,16 +15,16 @@ export default {
               dm: ['"DM Sans"', 'sans-serif'],
             },
             width: {
-              '128': '32rem', 
-              '160': '40rem', 
-              '192': '48rem', 
+              '128': '32rem',
+              '160': '40rem',
+              '192': '48rem',
               '224': '56rem',
               '256': '64rem',
             },
             height: {
-              '128': '32rem', 
-              '160': '40rem', 
-              '192': '48rem', 
+              '128': '32rem',
+              '160': '40rem',
+              '192': '48rem',
               '224': '56rem',
               '256': '64rem',
             },
@@ -34,5 +34,8 @@ export default {
         },
     },
 
-    plugins: [forms],
+    plugins: [
+        forms,
+        require('@tailwindcss/typography'),
+    ],
 };
