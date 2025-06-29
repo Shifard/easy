@@ -32,12 +32,6 @@ new class extends Component
                 <a href="{{ route('home') }}" class="text-sm font-medium text-gray-600 hover:text-gray-900 px-1 py-2 transition-colors duration-200" wire:navigate>
                     Home
                 </a>
-                <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900 px-1 py-2 transition-colors duration-200">
-                    About
-                </a>
-                <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900 px-1 py-2 transition-colors duration-200">
-                    Contact
-                </a>
 
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
