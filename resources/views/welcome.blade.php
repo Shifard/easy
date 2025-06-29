@@ -37,7 +37,7 @@
         @if (Route::has('login'))
         <nav class="hidden md:flex space-x-4 items-center">
             @auth
-                <a href="{{ url('/dashboard') }}" class="text-blue-100 hover:text-blue-600 font-medium">Dashboard</a>
+                <a href="{{ url('/home') }}" class="text-blue-100 hover:text-blue-600 font-medium">Home</a>
             @else
                 <a href="{{ route('login') }}" class="gray-bg font-semibold text-xs text-white px-6 py-3 rounded-full hover:bg-gray-700 transition duration-300 delay-100">Login</a>
                 @if (Route::has('register'))
