@@ -1,7 +1,7 @@
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Back Arrow -->
     <div class="mb-8">
-        <a href="{{ url()->previous() }}" class="flex items-center text-gray-500 hover:text-gray-700">
+        <a href="{{ url()->previous() }}" wire:navigate class="flex items-center text-gray-500 hover:text-gray-700">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
             Back
         </a>
@@ -16,6 +16,25 @@
                 {{ $blog->description }}
             </p>
         </header>
+
+        <div class="mb-6">
+            <!-- Profile -->
+            <a href="{{ route('profile', ['user' => $blog->user]) }}">
+                <div class="flex items-center">
+                    <div class="w-6 h-6 bg-indigo-600 rounded-full flex items-center justify-center text-white text-xs font-medium mr-2">
+                        {{ substr($blog->user->name, 0, 1) }}
+                    </div>
+                    <p class="text-gray-600">{{ $blog->user->name }}</p>
+                </div>
+                <p class="block text-gray-600">
+                    &#64;{{ $blog->user->username }}
+                </p>
+            </a>
+            <!-- Date -->
+            <p class="mt-1 text-sm text-gray-600">
+                {{ $blog->updated_at->format('F j, Y') }}
+            </p>
+        </div>
 
         <div class="flex items-center space-x-4 mb-6">
             @can('update', $blog)
