@@ -26,12 +26,6 @@ class DatabaseSeeder extends Seeder
 
         // Create other user accounts
         User::create([
-            'name' => 'Marcox Mediran',
-            'username' => 'marcoxmediran',
-            'email' => 'marcox@email.com',
-            'password' => bcrypt('12345678'),
-        ]);
-        User::create([
             'name' => 'Test User',
             'username' => 'testuser',
             'email' => 'test@email.com',
@@ -57,10 +51,10 @@ class DatabaseSeeder extends Seeder
 
         Blog::create([
             'user_id' => 2,
-            'title' => 'Marcox Blog 1',
-            'description' => 'Marcox Description 1',
-            'slug' => 'marcox-blog-1' . '-' . uniqid(),
-            'content' => 'Marcox Content 1',
+            'title' => 'Test User Blog 1',
+            'description' => 'Test Description 1',
+            'slug' => 'test-blog-1' . '-' . uniqid(),
+            'content' => 'Test Content 1',
         ]);
     }
 }
